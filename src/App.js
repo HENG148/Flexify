@@ -1,22 +1,22 @@
 import React from "react";
-import HomePage from "./components/Home/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./components/Home/HomePage";
 import News from "./components/Header/MoreInfo/News/News";
 import About from "./components/Header/MoreInfo/About/About";
 import Sell from "./components/Header/MoreInfo/Selling/Sell";
 import Help from "./components/Header/MoreInfo/Help/Help";
 import SignUP from "./components/Header/Log/LogIn_SignUp/Signup";
 import LogIn from "./components/Header/Log/LogIn_SignUp/LogIn";
-// import MainHeader from "./components/Header/MainHeader";
-// import SearchBar from "./components/Header/Search/SearchBar";
-// import MainOption from "./components/Header/SubHead/DropMenu/Page";
-// import { Navbar } from "./components/Header/SubHead/DropMenu/NavBar";
-// import { SliderData } from './data/sliderData'
-// import ImageSlider from "./components/ImageSlider"; 
+import Nike from "./components/ShopBrand/Nike/Nike";
+import Adidas from "./components/ShopBrand/Adidas/Adidas";
+import NewBalance from "./components/ShopBrand/New_Balance/NewBalance";
+import Puma from "./components/ShopBrand/Puma/Puma";
+import ImageSlide from "./components/ImageSlide";
+import { SliderData } from "./data/sliderData";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <div>
         <Router>
           <Routes>
@@ -43,12 +43,16 @@ function App() {
             <Route path="/Sneaker" />
             <Route path="/More_Categories" />
           </Routes>
+
+          <Routes>
+            <Route path="/Nike_&_Jorden" element={<Nike />} />
+            <Route path="/Adidas" element={<Adidas />} />
+            <Route path="/New_Balance" element={<NewBalance />} />
+            <Route path="/Puma" element={<Puma />} />
+          </Routes>
         </Router>
-
-
-         {/* <ImageSlider images={SliderData} /> */}
       </div>
-    </div>
+    </>
   );
 }
 

@@ -6,14 +6,16 @@ export default function MainOption() {
     <>
       <div className='flex items-center justify-center bg-light-gray pt-1 pb-1'>
         <div className='flex gap-8 text-[1.2rem] font-medium font-main'>
-          <Link>New Arrived</Link>
-          <Link>Brands</Link>
-          <Link>Men</Link>
-          <Link>Women</Link>
-          <Link>Kids</Link>
-          <Link>Accessories</Link>
-          <Link>Sneaker</Link>
-          <Link>More Categories</Link>
+          <Link to='/New_Arrived'
+            className='oo'
+          >New Arrived</Link>
+          <Link to='/Brand' className='oo'>Brands</Link>
+          <Link to='/Men' className='oo'>Men</Link>
+          <Link to='/Women' className='oo'>Women</Link>
+          <Link to='/Kids' className='oo'>Kids</Link>
+          <Link to='/Accessories' className='oo'>Accessories</Link>
+          <Link to='/Sneaker' className='oo'>Sneaker</Link>
+          <Link to='/More_Categories' className='oo'>More Categories</Link>
         </div>
       </div>
     </>

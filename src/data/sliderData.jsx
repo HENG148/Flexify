@@ -1,7 +1,7 @@
 export const SliderData = [
   {
     image: "/images/sub-buzz-784-1695501290-1.jpg",
-    title: "Brazil",
+    title: "Promo",
   },
   {
     image: "/images/240113-fl-retro-1-hi-yellow-ochre-1up.png",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './styles/Carousel.css'
+import '../styles/Carousel.css'
 
 function ImageSlider({ images }) {
   const [current, setCurrent] = useState(0);

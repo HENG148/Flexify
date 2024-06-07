@@ -62,16 +62,6 @@ export default function MainHeader() {
             </div>
           </div>
         </div>
-
-        <div className='subhead'>
-          <div>
-            <MainOption />
-          </div>
-
-          <div>
-            <AdsText />
-          </div>
-        </div>
       </div>
     </>
   )
