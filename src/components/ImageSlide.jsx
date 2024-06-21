@@ -15,7 +15,7 @@ export default function ImageSlide() {
 
   return (
     <>   
-      <div className='w-[93%] ml-[4.5rem] h-[45rem]  mt-6'>
+      <div className='w-[93%] ml-[4.25rem] h-[45rem] mt-6' data-aos="fade-up">
         <Swiper pagination={true} modules={[Pagination, Autoplay]} autoplay={{ delay: 5000 }} className="mySwiper">
           {slides.map((slide, idx) => (
             <SwiperSlide key={idx}>
@@ -27,23 +27,3 @@ export default function ImageSlide() {
     </>
   );
 }
-{/* {images.map((image, index) => (
-  <SwiperSlide key={index}>
-  <img src={image} alt={`Slide ${index + 1 }`} />
-  </SwiperSlide>
-))} */}
-  {/* <SwiperSlide>
-    <img src={ slide1 } alt='' width={180} />
-  </SwiperSlide>
-  <SwiperSlide>
-    <img src={ slide2 } alt='' width={180} />
-  </SwiperSlide>
-  <SwiperSlide>
-    <img src={ slide3 } alt='' width={180} />
-  </SwiperSlide>
-  <SwiperSlide>
-    <img src={ slide4 } alt='' width={180} />
-  </SwiperSlide>
-  <SwiperSlide>
-    <img src={ slide5 } alt='' width={180} />
-  </SwiperSlide> */}

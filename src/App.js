@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/Home/HomePage";
 import News from "./components/Header/MoreInfo/News/News";
@@ -7,14 +9,17 @@ import Sell from "./components/Header/MoreInfo/Selling/Sell";
 import Help from "./components/Header/MoreInfo/Help/Help";
 import SignUP from "./components/Header/Log/LogIn_SignUp/Signup";
 import LogIn from "./components/Header/Log/LogIn_SignUp/LogIn";
-import Nike from "./components/ShopBrand/Nike/Nike";
-import Adidas from "./components/ShopBrand/Adidas/Adidas";
-import NewBalance from "./components/ShopBrand/New_Balance/NewBalance";
-import Puma from "./components/ShopBrand/Puma/Puma";
-import ImageSlide from "./components/ImageSlide";
-import { SliderData } from "./data/sliderData";
+import { Breadcrumbs } from "./components/Breadcrumb";
+import ShoesDetail from "./Pages/ShoesDetail/Page";
+import NikePage from "./components/Sneaker/Nike/NikePage";
+import LogPage from "./components/Header/Log/LogPage";
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  })
+
   return (
     <>
       <div>
@@ -23,6 +28,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/SignUp" element={<SignUP />} />
             <Route path="/LogIn" element={<LogIn />} />
+            <Route path="/Logpage" element={<LogPage />} />
           </Routes>
 
           {/* <MainHeader /> */}
@@ -43,12 +49,14 @@ function App() {
             <Route path="/Sneaker" />
             <Route path="/More_Categories" />
           </Routes>
-
+        
+          {/* Shoes Detail */}
           <Routes>
-            <Route path="/Nike_&_Jorden" element={<Nike />} />
-            <Route path="/Adidas" element={<Adidas />} />
-            <Route path="/New_Balance" element={<NewBalance />} />
-            <Route path="/Puma" element={<Puma />} />
+            {/* <Route
+              path='/Sneaker/Under Armour/Curry/Under-Armour-Curry-11-Dub-Nation'
+              element={<Page />} /> */}
+            <Route exact path="/Sneaker/:id" element={<ShoesDetail />} />
+            <Route path="/Nike" element={<NikePage />} />
           </Routes>
         </Router>
       </div>

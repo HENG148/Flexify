@@ -212,7 +212,7 @@ input::placeholder {
   width: auto;
 } */
 
-@keyframes slide {
+/* @keyframes slide {
   from {
     transform: translateX(0);
   }
@@ -233,6 +233,21 @@ input::placeholder {
 }
 
 .logos-slide {
-  /* display: inline-block; */
+  /* display: inline-block; 
   animation: 5s slide infinite  linear;
+} */
+
+.ji {
+  font-size: 1.3rem;
+}
+
+.pol {
+  border: 1.5px solid #000;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tt:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
 }
